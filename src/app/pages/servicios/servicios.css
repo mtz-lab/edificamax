@@ -1,0 +1,172 @@
+.servicios{
+    padding:100px 0;
+    background:#f5f5f5;
+    text-align:center;
+}
+
+/* subtitulo */
+
+.subtitulo-servicios{
+    font-size:14px;
+    letter-spacing:3px;
+    color:#555;
+    border-bottom:2px solid #0b3c4c;
+    display:inline-block;
+    padding-bottom:6px;
+}
+
+/* titulo */
+
+.titulo-servicios{
+    font-size:35px;
+    margin-top:20px;
+    margin-bottom:60px;
+    color: #023047;
+    font-weight:700;
+    font-family: "Playfair Display", serif;
+}
+
+/* grid */
+
+.servicios-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:35px;
+}
+
+/* cards */
+
+.servicio-card{
+    background:white;
+    padding:45px 30px;
+    border-radius:8px;
+    box-shadow:0 6px 20px rgba(0,0,0,0.1);
+    transition:0.3s;
+}
+
+.servicio-card:hover{
+    transform:translateY(-10px);
+}
+
+/* icono */
+
+.icono{
+    width:90px;
+    height:90px;
+    background:#d9d9d9;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin:0 auto 20px auto;
+    font-size:38px;
+    color:#0b3c4c;
+}
+
+/* titulo card */
+
+.servicio-card h3{
+    font-size:20px;
+    color:#0b3c4c;
+    margin-bottom:15px;
+}
+
+/* texto */
+
+.servicio-card p{
+    font-size:14px;
+    color:#555;
+}
+
+
+.social-icon {
+    color: #ffffff; /* Color inicial blanco */
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.social-icon:hover {
+    color: #bc9b6a; /* Cambia a tu dorado al pasar el mouse */
+    transform: translateY(-5px); /* Pequeño salto hacia arriba */
+}
+
+
+
+
+
+
+
+
+/* --- HERO SECTION SERVICIOS --- */
+.hero-servicios {
+    height: 80vh; /* Altura de la sección */
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+                url('https://images.unsplash.com/photo-1754818700642-8cf121ff76e6?q=80&w=1170&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding-left: 10%; /* Alineado a la izquierda como la foto */
+    color: white;
+}
+
+.hero-top-line {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.hero-top-line .line {
+    width: 50px;
+    height: 2px;
+    background: #bc9b6a; /* Tu dorado */
+}
+
+.hero-top-line .text {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    letter-spacing: 3px;
+    font-weight: 300;
+}
+
+.hero-title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    font-size: 5rem;
+    line-height: 0.9;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+
+/* Efecto de letra hueca (Outline) */
+.hero-title .outline {
+    display: block;
+    color: transparent;
+    -webkit-text-stroke: 1px white;
+}
+
+.hero-links {
+    display: flex;
+    gap: 40px;
+}
+
+.hero-links a {
+    color: #bc9b6a; /* Dorado */
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+.hero-links a:hover {
+    color: white;
+}
+
+/* Ajuste para móviles */
+@media (max-width: 768px) {
+    .hero-title { font-size: 2.5rem; }
+    .hero-servicios { padding-left: 5%; }
+}

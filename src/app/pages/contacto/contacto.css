@@ -1,0 +1,255 @@
+
+
+
+
+
+/* ===== CONTACTO ===== */
+
+.contacto{
+
+background:#f5f5f5;
+padding:100px 0;
+position:relative;
+overflow:hidden;
+
+}
+
+/* CURVA DECORATIVA */
+
+.curva-contacto{
+
+position:absolute;
+top:-120px;
+left:-200px;
+
+width:600px;
+height:300px;
+
+background:#023047;
+
+border-radius:60% 40% 70% 30% / 40% 60% 40% 60%;
+transform:rotate(-10deg);
+
+opacity:0.15;
+
+}
+
+/* TITULO */
+
+.titulo-contacto{
+
+font-family:'Playfair Display',serif;
+font-size:42px;
+color:#023047;
+margin-bottom:40px;
+font-weight:700;
+
+}
+
+
+/* TARJETAS */
+
+.contacto-card{
+
+background:white;
+padding:40px 30px;
+border-radius:15px;
+
+box-shadow:0 10px 25px rgba(0,0,0,0.08);
+
+transition:all 0.3s ease;
+
+}
+
+.contacto-card:hover{
+
+transform:translateY(-8px);
+box-shadow:0 18px 40px rgba(0,0,0,0.15);
+
+}
+
+.contacto-card h4{
+
+color:#023047;
+margin-top:15px;
+font-weight:700;
+
+}
+
+.contacto-card p{
+
+color:#555;
+margin-top:10px;
+
+}
+
+
+/* ICONOS */
+
+.icono-contacto{
+
+font-size:42px;
+color:#023047;
+
+}
+
+
+/* ===== MAPA ===== */
+
+.mapa-contacto{
+
+background:white;
+padding:80px 0;
+
+}
+
+.titulo-mapa{
+
+color:#023047;
+font-family:'Playfair Display',serif;
+font-size:36px;
+margin-bottom:35px;
+
+}
+
+.mapa iframe{
+
+border-radius:12px;
+box-shadow:0 10px 25px rgba(0,0,0,0.15);
+
+}
+
+
+/* ===== REDES ===== */
+
+#redes-sociales{
+
+background:#023047;
+
+}
+
+.titulo-redes{
+
+color:#bc9b6a;
+font-family:'Playfair Display', serif;
+margin-bottom:30px;
+
+}
+
+.social-icon{
+
+color:white;
+transition:all 0.3s ease;
+text-decoration:none;
+
+}
+
+.social-icon:hover{
+
+color:#bc9b6a;
+transform:translateY(-6px) scale(1.1);
+
+}
+
+.footer-texto{
+
+margin-top:25px;
+color:rgba(255,255,255,0.6);
+font-family:'Montserrat', sans-serif;
+font-size:0.9rem;
+
+}
+
+
+
+
+/* --- ESTILOS SECCIÓN CONTACTO LIMPIO --- */
+.contacto-limpio {
+    position: relative; /* Clave para el posicionamiento de los hijos */
+    width: 100%;
+    min-height: 650px; /* Altura mínima para que luzca el diseño */
+    background-color: #f8f9fa; /* Fondo gris muy claro de la sección */
+    overflow: hidden; /* Evita scrolls no deseados si la imagen es grande */
+    padding-bottom: 80px;
+}
+
+/* LA CASA DE FONDO (Capa intermedia) */
+.casa-fondo-capa {
+    position: absolute;
+    right: 0;
+    /* Cambia este valor para bajar la imagen: */
+    bottom: -120px;
+
+    width: 60%;
+    z-index: 1;
+    opacity: 0.9;
+    pointer-events: none;
+}
+
+.casa-fondo-capa img {
+   width: 100%;
+    height: auto;
+    display: block;
+    /* Esto asegura que la imagen se alinee al final del contenedor */
+    vertical-align: bottom;
+}
+
+/* EL CONTENIDO (Tarjetas arriba de todo) */
+.contenido-principal {
+    position: relative; /* Requerido para usar z-index */
+    z-index: 100; /* Nivel de capa alto, por encima de la casa */
+    padding-top: 5px !important;
+}
+
+/* Esto bajará SOLO los cuadros, dejando el título "Contacto" arriba */
+.contenedor-tarjetas-bajas {
+    /* Ajusta este valor para bajar los cuadros a la altura deseada sobre la casa */
+    margin-top: 200px !important;
+}
+
+
+
+
+
+
+/* Estilo para tus tarjetas para que se lean bien */
+.contacto-card {
+    background: #ffffff; /* Fondo blanco sólido para las tarjetas */
+    border-radius: 20px;
+    padding: 40px 20px;
+    transition: transform 0.3s;
+    border: none;
+}
+.contacto-limpio {
+    position: relative;
+    width: 100%;
+    min-height: 700px;
+    background-color: #f8f9fa;
+    /* Importante: oculta la parte de la imagen que se salga por abajo */
+    overflow: hidden;
+    padding-bottom: 0; /* Quitamos el padding para que la imagen toque el borde */
+}
+
+
+
+
+.contacto-card:hover {
+    transform: translateY(-10px);
+}
+
+.icono-contacto {
+    color: #bc9b6a; /* Tu dorado */
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    display: block;
+}
+
+/* Responsive para móvil */
+@media (max-width: 768px) {
+    .casa-fondo-capa {
+        width: 100%; /* En móvil la casa ocupa todo el ancho */
+        opacity: 0.3; /* Y la hacemos más transparente para no tapar */
+        position: relative;
+        margin-top: -100px; /* La subimos para que quede detrás de las tarjetas */
+    }
+}

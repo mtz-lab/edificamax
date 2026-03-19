@@ -1,0 +1,149 @@
+/* 1. IMPORTACIÓN DE FUENTES */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@200;300;400;600&display=swap');
+
+/* 2. ESTILOS GENERALES */
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: #333;
+    background-color: #ffffff; /* El fondo general es blanco */
+    margin: 0;
+    padding: 0;
+}
+
+/* 3. CAROUSEL PRINCIPAL */
+#carouselInicio {
+    height: 100vh;
+    overflow: hidden;
+    background-color: #000;
+}
+
+.carousel-img {
+    height: 100vh;
+    width: 100%;
+    object-fit: cover;
+    opacity: 0.75;
+    transition: transform 10s ease-out;
+}
+
+.carousel-item.active .carousel-img {
+    transform: scale(1.1);
+}
+
+.carousel-caption {
+    background: none !important;
+    top: 40%;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+}
+
+.carousel-caption h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(3rem, 5vw, 6rem);
+    letter-spacing: 2px;
+}
+
+.carousel-caption p {
+    font-family: 'Montserrat', sans-serif;
+    /* Subimos el tamaño aquí. Prueba con 1.5rem o 1.8rem */
+    font-size: 1.1rem !important;
+    font-weight: 500;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    margin-top: 10px;
+}
+
+/* 4. CONTENEDOR OSCURO (Aquí eliminamos el azul) */
+/* Esta clase debe envolver tanto al compromiso como a la ubicación en tu HTML */
+.contenedor-negro-seccion {
+    background-color: #ffffff !important; /* El color oscuro de tu imagen */
+    padding-top: 1px; /* Evita colapso de márgenes */
+    padding-bottom: 0;
+}
+
+/* 5. CUADRO BLANCO DE COMPROMISO */
+.cuadro-compromiso-blanco {
+    background-color: #ffffff !important;
+    border-radius: 5px;
+    margin-top: 100px; /* Desplazamiento hacia abajo */
+    margin-bottom: 200px;
+    padding: 80px 60px !important;
+    text-align: center;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+}
+
+.section-title-dorado {
+    font-family: 'Playfair Display', serif;
+    color: #023047;
+    font-size: 2.8rem;
+    margin-bottom: 10px;
+}
+
+.linea-decorativa {
+    display: block;
+    width: 60px;
+    height: 1px;
+    background-color: #023047;
+    margin: 0 auto 30px;
+}
+
+.p-principal {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #1a1a1a;
+}
+
+
+/* 6. SECCIÓN UBICACIÓN (Dentro del fondo oscuro) */
+.titulo-ubicacion-blanco {
+    font-family: 'Playfair Display', serif;
+    color: #bc9b6a !important; /* Forzamos blanco */
+    font-size: 2.8rem;
+    margin-top: 90px;
+    margin-bottom: 100px;
+    text-align: center;
+}
+
+.map-wrapper {
+    border-radius: 20px;
+    overflow: hidden;
+    border: none;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.5) !important;
+    line-height: 0;
+}
+
+.map-wrapper iframe {
+    width: 100%;
+    display: block;
+}
+
+/* Ajustes Responsivos */
+@media (max-width: 780px) {
+    .cuadro-compromiso-blanco {
+        margin-top: 50px;
+        padding: 40px 20px !important;
+    }
+    .section-title-dorado, .titulo-ubicacion-blanco {
+        font-size: 2rem;
+    }
+}
+
+
+
+
+
+.social-icon {
+    color: #ffffff; /* Color inicial blanco */
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.social-icon:hover {
+    color: #bc9b6a; /* Cambia a tu dorado al pasar el mouse */
+    transform: translateY(-5px); /* Pequeño salto hacia arriba */
+}
+
+
+
+
+
+
+

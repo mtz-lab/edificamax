@@ -1,0 +1,41 @@
+.navbar-brand {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #ffffff !important; /* Blanco para el logo/nombre */
+}
+
+.nav-link {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-left: 25px;
+    color: #ffffff !important; /* Blanco para los links */
+    position: relative;
+    transition: opacity 0.3s ease, color 0.3s ease;
+}
+
+/* Efecto cuando pasas el mouse (Hover) */
+.nav-link:hover {
+    color: #ffffff !important;
+    opacity: 0.7; /* En lugar de cambiar color, se vuelve un poco transparente */
+}
+
+/* Línea sutil blanca que aparece debajo al hacer hover */
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 1px;
+    bottom: -5px;
+    left: 0;
+    background-color: #ffffff; /* Línea blanca */
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}

@@ -1,0 +1,153 @@
+.proyectos{
+    background:#f5f5f5;
+    padding:80px 0;
+}
+
+.titulo-proyectos{
+    font-family: "Playfair Display", serif;
+    color:#023047;
+    font-size:50px;
+    margin-bottom:10px;
+}
+
+.subtitulo-proyectos{
+    color:#023047;
+    margin-bottom:40px;
+    font-size:20px;
+}
+
+.proyecto-card{
+    background:white;
+    border-radius:10px;
+    overflow:hidden;
+    transition:0.3s;
+}
+
+.proyecto-card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+
+.proyecto-card .contenido{
+    text-align: center;
+    padding:20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;     /* centra verticalmente */
+    align-items: center;
+    color:#023047;
+}
+
+.proyecto-card h4{
+    font-family: 'Playfair Display', serif;  /* misma fuente elegante */
+    color: #023047;
+    font-size: 26px;
+    text-align: center;
+}
+
+.proyecto-card:hover{
+    transform:translateY(-8px);
+}
+
+.proyecto-card p{
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.social-icon {
+    color: #ffffff; /* Color inicial blanco */
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.social-icon:hover {
+    color: #bc9b6a; /* Cambia a tu dorado al pasar el mouse */
+     transform:translateY(-10px);
+}
+
+
+.mapa-proyectos{
+    background:white;
+    padding:80px 0;
+}
+
+.titulo-mapa{
+    font-family: "Playfair Display", serif;
+    color:#023047;
+    font-size:38px;
+    margin-bottom:20px;
+}
+
+.texto-mapa{
+    font-size:18px;
+    line-height:1.6;
+    color:black;
+    text-align:justify;
+}
+
+.mapa-img{
+    border-radius:12px;
+    box-shadow:0 6px 20px rgba(0,0,0,0.2);
+}
+
+.modal-dialog{
+    max-width: 85%;
+}
+
+
+.modal-body img{
+cursor:pointer;
+transition:0.3s;
+}
+
+.modal-body img:hover{
+transform:scale(1.05);
+}
+
+.proyecto-card{
+cursor:pointer;
+transition:0.3s;
+}
+
+.proyecto-card:hover{
+transform:scale(1.05);
+}
+
+.carousel-item img{
+max-height:80vh;
+object-fit:contain;
+}
+
+.social-icon {
+    color: #ffffff; /* Color inicial blanco */
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.social-icon:hover {
+    color: #bc9b6a; /* Cambia a tu dorado al pasar el mouse */
+    transform: translateY(-5px); /* Pequeño salto hacia arriba */
+}
+
+/* --- ESTILOS SECCIÓN UBICACIÓN (IMAGEN) --- */
+#ubicacion-diseno {
+    margin-bottom: 0 !important;
+    padding-bottom: 100px;
+}
+
+.mapa-imagen-contenedor {
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+/* Efecto opcional al pasar el mouse por la imagen */
+.mapa-imagen-contenedor:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+}
+
+/* Esto cambiará el color de ese título específico */
+#ubicacion-diseno h2 {
+    color: #023047!important; /* Pon aquí el color que prefieras, ej: #bc9b6a es dorado */
+    font-family: 'Playfair Display', serif;
+}

@@ -1,0 +1,88 @@
+.titulo{
+    font-weight: bold;
+    color:#023047;
+}
+
+.texto-nosotros{
+    font-size:18px;
+    line-height:1.6;
+    text-align: justify;
+    color:black;
+}
+
+.nosotros{
+    background:white;
+    padding:80px 0;
+}
+
+.titulo-valores{
+    color:#023047;   /* dorado elegante */
+    font-family: "Playfair Display", serif;
+    font-size:35px;
+    text-align:center;
+    margin-bottom: 25px;
+}
+
+.titulo-nosotros{
+    color:#023047;   /* dorado elegante */
+    font-family: "Playfair Display", serif;
+    font-size:45px;
+    margin-bottom:15px;
+    text-align: center;
+}
+
+.card{
+    padding:40px;
+    border-radius:15px;
+    min-height:240px;
+}
+
+.icono{
+    font-size:50px;
+    color:#023047;
+    margin-bottom:15px;
+}
+
+.valor{
+    background:white;
+    border-radius:15px;
+    padding:35px;
+    text-align:center;
+    min-height:220px;
+    transition:0.3s;
+}
+
+.valor i{
+    font-size:45px;
+    color:#023047;
+    margin-bottom:15px;
+}
+
+.valor:hover{
+    transform:translateY(-8px);
+}
+
+
+.valor h4{
+    color:#023047;
+    font-weight:bold;
+    margin-top:10px;
+}
+
+.valor p{
+    color:#333;
+    font-size:16px;
+}
+
+
+
+.social-icon {
+    color: #ffffff; /* Color inicial blanco */
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.social-icon:hover {
+    color: #bc9b6a; /* Cambia a tu dorado al pasar el mouse */
+    transform: translateY(-5px); /* Pequeño salto hacia arriba */
+}
