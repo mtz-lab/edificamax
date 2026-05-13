@@ -87,4 +87,12 @@ export class Proyectos {
       this.fotoActual++;
     }
   }
+
+scrollToProyectos() {
+    const el = document.getElementById('proyectos');
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
+
 }
