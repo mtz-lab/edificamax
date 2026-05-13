@@ -5,7 +5,7 @@
 body {
     font-family: 'Montserrat', sans-serif;
     color: #333;
-    background-color: #ffffff; /* El fondo general es blanco */
+    background-color: #ffffff;
     margin: 0;
     padding: 0;
 }
@@ -43,7 +43,6 @@ body {
 
 .carousel-caption p {
     font-family: 'Montserrat', sans-serif;
-    /* Subimos el tamaño aquí. Prueba con 1.5rem o 1.8rem */
     font-size: 1.1rem !important;
     font-weight: 500;
     letter-spacing: 6px;
@@ -51,51 +50,49 @@ body {
     margin-top: 10px;
 }
 
-/* 4. CONTENEDOR OSCURO (Aquí eliminamos el azul) */
-/* Esta clase debe envolver tanto al compromiso como a la ubicación en tu HTML */
-.contenedor-negro-seccion {
-    background-color: #ffffff !important; /* El color oscuro de tu imagen */
-    padding-top: 1px; /* Evita colapso de márgenes */
-    padding-bottom: 0;
+/* 4. NUEVA SECCIÓN COMPROMISO (SIN CUADRO) */
+.seccion-compromiso-nueva {
+    background-color: #FBF9F6; /* Fondo beige suave unificado */
+    padding: 100px 0;
 }
 
-/* 5. CUADRO BLANCO DE COMPROMISO */
-.cuadro-compromiso-blanco {
-    background-color: #ffffff !important;
-    border-radius: 5px;
-    margin-top: 100px; /* Desplazamiento hacia abajo */
-    margin-bottom: 200px;
-    padding: 80px 60px !important;
-    text-align: center;
-    box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+.compromiso-imagen img {
+    border-radius: 10px;
+    /* Sombra muy sutil para que no parezca un cuadro pesado */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
 }
 
 .section-title-dorado {
     font-family: 'Playfair Display', serif;
-    color: #023047;
+    color: #023047; /* Azul oscuro */
     font-size: 2.8rem;
+    font-weight: 700;
     margin-bottom: 10px;
 }
 
-.linea-decorativa {
+.linea-decorativa-izquierda {
     display: block;
     width: 60px;
-    height: 1px;
-    background-color: #023047;
-    margin: 0 auto 30px;
+    height: 3px;
+    background-color: #bc9b6a; /* Dorado */
+    margin: 15px 0 25px 0; /* Alineada a la izquierda */
 }
 
 .p-principal {
-    font-size: 1.5rem;
-    font-weight: 500;
-    color: #1a1a1a;
-}
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: black;
+    line-height: 1.8;
+    text-align: justify;
+    padding-left: 0 !important;
+    margin-left: 0 !important;
+  }
 
-
-/* 6. SECCIÓN UBICACIÓN (Dentro del fondo oscuro) */
+/* 5. SECCIÓN UBICACIÓN */
 .titulo-ubicacion-blanco {
     font-family: 'Playfair Display', serif;
-    color: #bc9b6a !important; /* Forzamos blanco */
+    color: #bc9b6a !important;
     font-size: 2.8rem;
     margin-top: 90px;
     margin-bottom: 100px;
@@ -106,7 +103,7 @@ body {
     border-radius: 20px;
     overflow: hidden;
     border: none;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.5) !important;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1) !important;
     line-height: 0;
 }
 
@@ -115,35 +112,47 @@ body {
     display: block;
 }
 
-/* Ajustes Responsivos */
-@media (max-width: 780px) {
-    .cuadro-compromiso-blanco {
-        margin-top: 50px;
-        padding: 40px 20px !important;
-    }
-    .section-title-dorado, .titulo-ubicacion-blanco {
-        font-size: 2rem;
-    }
+/* 6. REDES SOCIALES */
+#redes-sociales {
+    background-color: #023047;
 }
 
-
-
-
-
 .social-icon {
-    color: #ffffff; /* Color inicial blanco */
+    color: #ffffff;
     transition: all 0.3s ease;
     text-decoration: none;
 }
 
 .social-icon:hover {
-    color: #bc9b6a; /* Cambia a tu dorado al pasar el mouse */
-    transform: translateY(-5px); /* Pequeño salto hacia arriba */
+    color: #bc9b6a;
+    transform: translateY(-5px);
 }
 
+/* 7. AJUSTES RESPONSIVOS */
+@media (max-width: 991px) {
+    .seccion-compromiso-nueva {
+        padding: 60px 0;
+    }
 
+    .section-title-dorado {
+        font-size: 2.2rem;
+        text-align: center !important;
+    }
 
+    .linea-decorativa-izquierda {
+        margin: 15px auto 30px auto; /* Centrada en móviles */
+    }
 
+    .p-principal {
+        text-align: center !important;
+        font-size: 1rem;
+    }
+
+    .titulo-ubicacion-blanco {
+        font-size: 2rem;
+        margin-top: 50px;
+    }
+}
 
 
 

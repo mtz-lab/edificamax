@@ -1,13 +1,6 @@
-
-
-
-
-
-/* ===== CONTACTO ===== */
-
 .contacto{
 
-background:#f5f5f5;
+background-color:#fbf9f6;
 padding:100px 0;
 position:relative;
 overflow:hidden;
@@ -51,9 +44,9 @@ font-weight:700;
 
 .contacto-card{
 
-background:white;
-padding:40px 30px;
-border-radius:15px;
+background:#ffffff;
+padding:40px 20px;
+border-radius:20px;
 
 box-shadow:0 10px 25px rgba(0,0,0,0.08);
 
@@ -98,7 +91,7 @@ color:#023047;
 
 .mapa-contacto{
 
-background:white;
+background:#FBF9F6;
 padding:80px 0;
 
 }
@@ -167,10 +160,10 @@ font-size:0.9rem;
 .contacto-limpio {
     position: relative; /* Clave para el posicionamiento de los hijos */
     width: 100%;
-    min-height: 650px; /* Altura mínima para que luzca el diseño */
-    background-color: #f8f9fa; /* Fondo gris muy claro de la sección */
+    min-height: 700px; /* Altura mínima para que luzca el diseño */
+    background-color: #fbf9f6;
     overflow: hidden; /* Evita scrolls no deseados si la imagen es grande */
-    padding-bottom: 80px;
+    padding-bottom: 0;
 }
 
 /* LA CASA DE FONDO (Capa intermedia) */
@@ -192,6 +185,8 @@ font-size:0.9rem;
     display: block;
     /* Esto asegura que la imagen se alinee al final del contenedor */
     vertical-align: bottom;
+    mask-image: linear-gradient(to left, black 80%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to left, black 80%, transparent 100%);
 }
 
 /* EL CONTENIDO (Tarjetas arriba de todo) */
@@ -252,4 +247,11 @@ font-size:0.9rem;
         position: relative;
         margin-top: -100px; /* La subimos para que quede detrás de las tarjetas */
     }
+}
+
+
+body {
+    background-color: #FBF9F6 !important;
+    margin: 0;
+    padding: 0;
 }

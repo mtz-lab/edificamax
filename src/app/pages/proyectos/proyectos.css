@@ -16,11 +16,17 @@
     font-size:20px;
 }
 
+/* CARDS */
 .proyecto-card{
     background:white;
     border-radius:10px;
     overflow:hidden;
+    cursor:pointer;
     transition:0.3s;
+}
+
+.proyecto-card:hover{
+    transform:translateY(-8px);
 }
 
 .proyecto-card img{
@@ -34,20 +40,16 @@
     padding:20px;
     display: flex;
     flex-direction: column;
-    justify-content: center;     /* centra verticalmente */
+    justify-content: center;
     align-items: center;
     color:#023047;
 }
 
 .proyecto-card h4{
-    font-family: 'Playfair Display', serif;  /* misma fuente elegante */
+    font-family: 'Playfair Display', serif;
     color: #023047;
     font-size: 26px;
     text-align: center;
-}
-
-.proyecto-card:hover{
-    transform:translateY(-8px);
 }
 
 .proyecto-card p{
@@ -55,18 +57,19 @@
     transition:0.3s;
 }
 
+/* ICONOS */
 .social-icon {
-    color: #ffffff; /* Color inicial blanco */
+    color: #ffffff;
     transition: all 0.3s ease;
     text-decoration: none;
 }
 
 .social-icon:hover {
-    color: #bc9b6a; /* Cambia a tu dorado al pasar el mouse */
-     transform:translateY(-10px);
+    color: #bc9b6a;
+    transform: translateY(-5px);
 }
 
-
+/* MAPA */
 .mapa-proyectos{
     background:white;
     padding:80px 0;
@@ -91,46 +94,7 @@
     box-shadow:0 6px 20px rgba(0,0,0,0.2);
 }
 
-.modal-dialog{
-    max-width: 85%;
-}
-
-
-.modal-body img{
-cursor:pointer;
-transition:0.3s;
-}
-
-.modal-body img:hover{
-transform:scale(1.05);
-}
-
-.proyecto-card{
-cursor:pointer;
-transition:0.3s;
-}
-
-.proyecto-card:hover{
-transform:scale(1.05);
-}
-
-.carousel-item img{
-max-height:80vh;
-object-fit:contain;
-}
-
-.social-icon {
-    color: #ffffff; /* Color inicial blanco */
-    transition: all 0.3s ease;
-    text-decoration: none;
-}
-
-.social-icon:hover {
-    color: #bc9b6a; /* Cambia a tu dorado al pasar el mouse */
-    transform: translateY(-5px); /* Pequeño salto hacia arriba */
-}
-
-/* --- ESTILOS SECCIÓN UBICACIÓN (IMAGEN) --- */
+/* UBICACIÓN */
 #ubicacion-diseno {
     margin-bottom: 0 !important;
     padding-bottom: 100px;
@@ -138,16 +102,339 @@ object-fit:contain;
 
 .mapa-imagen-contenedor {
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    background-color: #f0f4f8;
 }
 
-/* Efecto opcional al pasar el mouse por la imagen */
 .mapa-imagen-contenedor:hover {
     transform: translateY(-5px);
     box-shadow: 0 15px 40px rgba(0,0,0,0.2);
 }
 
-/* Esto cambiará el color de ese título específico */
 #ubicacion-diseno h2 {
-    color: #023047!important; /* Pon aquí el color que prefieras, ej: #bc9b6a es dorado */
+    color: #023047!important;
     font-family: 'Playfair Display', serif;
+}
+
+/* ========================= */
+/* MODAL (AQUI ESTA LA MAGIA) */
+/* ========================= */
+
+.modal-dialog{
+
+    margin: 1.75rem auto;
+}
+
+/* MODAL CON FONDO BLANCO PARA TEXTO */
+.modal-content {
+
+    border: none;
+    border-radius: 15px; /* Bordes más redondeados se ven mejor en cuadros pequeños */
+    overflow: hidden;
+}
+
+/* FONDO OSCURO DETRÁS (SE VE PRO) */
+.modal {
+    background: transparent !important;
+}
+
+/* QUITA EL FONDO NEGRO DE ATRÁS (BOOTSTRAP BACKDROP) */
+.modal-backdrop {
+    background: transparent !important;
+}
+
+/* OPCIONAL: quitar también opacidad */
+.modal-backdrop.show {
+    opacity: 0 !important;
+}
+
+/* SIN ESPACIOS */
+.modal-body {
+    padding: 2.5rem !important;
+    background: transparent;
+
+}
+
+/* EFECTO EN IMÁGENES */
+.modal-body img{
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.modal-body img:hover{
+    transform:scale(1.03);
+}
+
+/* CARRUSEL LIMPIO */
+.carousel-inner {
+    background: transparent !important;
+}
+
+.carousel-item {
+    text-align: center;
+}
+
+/* IMAGEN FULL SIN FONDO */
+.carousel-item img {
+    width: 100%;
+    height: auto;       /* Que la altura sea automática según la foto original */
+    max-height: 90vh; /* Un poco más grande para que luzca */
+    object-fit: contain;
+    display: block;
+    margin: auto;
+
+}
+
+/* FLECHAS BLANCAS */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    filter: drop-shadow(0px 0px 5px rgba(0,0,0,0.5));
+}
+
+#galeriaLienzo .modal-content,
+#galeriaNave .modal-content,
+#galeriaCasas .modal-content,
+#galeriaBanco .modal-content {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+
+
+.proyecto-full {
+  position: relative;
+  height: 350px;
+  overflow: hidden;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.proyecto-full img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.proyecto-full .overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0,0,0,0.8),
+    rgba(0,0,0,0.2)
+  );
+}
+
+.proyecto-full .contenido {
+  position: absolute;
+  bottom: 30px;
+  left: 25px;
+  color: white;
+}
+
+.proyecto-full h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+}
+
+.proyecto-full span {
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+  color: #bc9b6a;
+}
+
+.btn-ver {
+  margin-top: 10px;
+  font-size: 0.85rem;
+}
+
+.proyecto-full:hover img {
+  transform: scale(1.08);
+}
+
+
+
+
+
+/* HERO */
+.hero-proyectos {
+  position: relative;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* IMAGEN FONDO */
+.hero-img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* OVERLAY OSCURO */
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(0,0,0,0.75),
+    rgba(0,0,0,0.2)
+  );
+}
+
+/* CONTENIDO */
+.hero-contenido {
+  position: relative;
+  color: white;
+  z-index: 2;
+  max-width: 600px;
+}
+
+/* TÍTULO */
+.hero-contenido h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 60px;
+  margin-bottom: 20px;
+}
+
+/* TEXTO */
+.hero-contenido p {
+  font-size: 18px;
+  margin-bottom: 30px;
+  color: #ddd;
+}
+
+/* BOTÓN */
+.btn-hero {
+  display: inline-block;
+  background: #bc9b6a;
+  color: white;
+  padding: 16px 36px;   /* más grande */
+  border-radius: 10px;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+
+/* HOVER BOTÓN */
+.btn-hero:hover {
+  background: #a88455;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* SCROLL SUAVE */
+html {
+  scroll-behavior: smooth;
+}
+
+.titulo-proyectos-container {
+  margin-bottom: 70px;
+}
+
+#proyectos {
+  scroll-margin-top: 100px;
+}
+
+
+
+
+
+
+
+
+/* MODAL DINÁMICO */
+.modal-oscuro {
+  background: #1e2a35;
+  border: none;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.modal-header-oscuro {
+  background: #1e2a35;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  padding: 16px 20px;
+}
+
+.modal-titulo-blanco {
+  color: white;
+  font-family: 'Playfair Display', serif;
+}
+
+.carousel-box {
+  position: relative;
+  background: #16222c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 300px;
+}
+
+.foto-principal {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  display: block;
+}
+
+.car-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255,255,255,0.15);
+  border: none;
+  color: white;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  font-size: 22px;
+  cursor: pointer;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.car-arrow.left  { left: 12px; }
+.car-arrow.right { right: 12px; }
+
+.car-dots {
+  background: #16222c;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.3);
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.dot.active { background: #bc9b6a; }
+
+.modal-footer-info {
+  background: #16222c;
+  padding: 14px 20px;
+  display: flex;
+  gap: 24px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 13px;
+  color: #aaa;
+  border-top: 1px solid rgba(255,255,255,0.05);
+}
+
+.modal-footer-info i {
+  color: #bc9b6a;
+  margin-right: 5px;
 }

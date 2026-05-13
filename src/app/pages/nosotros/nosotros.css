@@ -46,20 +46,26 @@
 .valor{
     background:white;
     border-radius:15px;
-    padding:35px;
-    text-align:center;
-    min-height:220px;
-    transition:0.3s;
+    padding:40px 20px !important;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(0,0,0,0.05); /* Un borde casi invisible les da elegancia */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
 }
 
 .valor i{
-    font-size:45px;
+    font-size:2.5;
     color:#023047;
-    margin-bottom:15px;
+    margin-bottom:20px;
+    display: block;
 }
 
 .valor:hover{
-    transform:translateY(-8px);
+    transform:translateY(-10px);
+    box-shadow: 0 15px 45px rgba(0,0,0,0.1) !important;
 }
 
 
@@ -85,4 +91,8 @@
 .social-icon:hover {
     color: #bc9b6a; /* Cambia a tu dorado al pasar el mouse */
     transform: translateY(-5px); /* Pequeño salto hacia arriba */
+}
+
+.row.g-4 {
+    --bs-gutter-y: 1.5rem; /* Esto fuerza la separación de arriba/abajo */
 }
