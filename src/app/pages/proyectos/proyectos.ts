@@ -26,7 +26,7 @@ export class Proyectos {
     {
       id: 'diga',
       nombre: 'Proyecto DIGA',
-      categoria: 'Puerto Interior',
+      categoria: 'Mantenimiento industrial',
       ubicacion: 'Silao, Guanajuato',
       metros: '3,200 m²',
       anio: '2023',
